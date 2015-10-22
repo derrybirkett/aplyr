@@ -26,8 +26,8 @@ template(name="navbar")
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
           li
-            a(href='{{pathFor "Directory"}}')
-              | Directory
+            a(href='{{pathFor "About"}}')
+              | About
               span.sr-only (current)
           |         
 
@@ -38,7 +38,9 @@ template(name="navbar")
 
         ul.nav.navbar-nav.navbar-right
           li
-            a(href='/') Link
+            a(href='{{pathFor "Directory"}}')
+              | Directory
+              span.sr-only (current)
           |         
           li.dropdown
             a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
@@ -61,20 +63,6 @@ template(name="navbar")
                 a(href='#') Separated link
       // /.navbar-collapse
     // /.container-fluid
-
-    
-template(name="navbarf")
-  nav.navbar.navbar-default.navbar-fixed-top
-    .container-fluid
-      .navbar-header
-        a.navbar-brand(href='#')
-          img(src="img/logo.svg")
-      ul.nav.navbar-nav
-        li
-          a(href="#") Directory
-      div.navbar-form.navbar-right
-        .form-group
-          +loginButtons
 
 template(name="footer")
   .footer

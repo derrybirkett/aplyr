@@ -4,6 +4,9 @@ Router.configure
   waitOn: ->
     Meteor.subscribe 'users'
 
+Router.route '/about',
+  name: "About"
+
 Router.route '/directory',
   name: 'Directory'
   data: ->
