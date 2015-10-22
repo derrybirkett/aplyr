@@ -1,0 +1,6 @@
+template(name="directoryGrid")
+  .directoryGrid
+    ul
+    each user
+      li 
+        a(href="{{pathFor 'Profile' username=services.github.username}}") #{services.github.username}

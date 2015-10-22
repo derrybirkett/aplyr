@@ -1,0 +1,19 @@
+template(name="tabs")
+  .bs-component
+    ul.nav.nav-tabs.nav-justified
+      li.active
+        a(href='#home', data-toggle='tab', aria-expanded='true') Our Rating
+      li
+        a(href='#profile', data-toggle='tab', aria-expanded='false') Profile
+
+    #myTabContent.tab-content
+      #home.tab-pane.fade.active.in
+        p #{services.github.scheda.followers}
+
+      #profile.tab-pane.fade
+          dl
+            dt ID #{id}
+            dd Repos #{public_repos}
+            dd Gists #{public_gists}
+            dd Followers #{followers}
+            dd Following #{following}

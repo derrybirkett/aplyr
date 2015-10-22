@@ -1,0 +1,14 @@
+template(name="profile")
+  .profile
+    if profileHasLoaded
+      .scheda
+        .row
+          .container
+            .jumbotron
+              +usercard
+                  
+        .row
+          .container
+            +tabs
+    else 
+      +spinner

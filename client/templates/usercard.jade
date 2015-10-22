@@ -1,0 +1,12 @@
+template(name="usercard")
+  .usercard
+    img.img-circle.avatar(src="#{services.github.scheda.avatar_url}")
+    h3 #{services.github.scheda.name}
+    p.small #{services.github.scheda.location}
+
+    .follow
+      ul.pager
+        li
+          a() Add to Favourites
+        li
+          a() Hire
