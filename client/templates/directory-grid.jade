@@ -1,6 +1,8 @@
 template(name="directoryGrid")
   .directoryGrid
-    ul
     each user
-      li 
-        a(href="{{pathFor 'Profile' username=services.github.username}}") #{services.github.username}
+      a(href="{{pathFor 'Profile' username=services.github.username}}")
+        .col-md-4
+          img.img-circle.avatar.small(src="#{services.github.scheda.avatar_url}")
+          strong #{services.github.scheda.name}
+          | #{services.github.scheda.location}

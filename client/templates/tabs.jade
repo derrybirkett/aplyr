@@ -12,8 +12,8 @@ template(name="tabs")
 
       #profile.tab-pane.fade
           dl
-            dt ID #{id}
-            dd Repos #{public_repos}
-            dd Gists #{public_gists}
-            dd Followers #{followers}
-            dd Following #{following}
+            dt ID #{services.github.scheda.id}
+            dd Repos #{services.github.scheda.public_repos}
+            dd Gists #{services.github.scheda.public_gists}
+            dd Followers #{services.github.scheda.followers}
+            dd Following #{services.github.scheda.following}
