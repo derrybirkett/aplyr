@@ -2,7 +2,7 @@ template(name="layout")
   +navbar
   .layout
     +yield
-    +footer
+  +navbarBottom
     
 template(name="navbar")
   nav.navbar.navbar-default
@@ -24,45 +24,19 @@ template(name="navbar")
 
       // Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li
-            a(href='{{pathFor "About"}}')
-              | About
-              span.sr-only (current)
-          |         
-
-        ul.nav.navbar-nav.navbar-right
-          li
-            a
-              +loginButtons
-
         ul.nav.navbar-nav.navbar-right
           li
             a(href='{{pathFor "Directory"}}')
               | Directory
-              span.sr-only (current)
-          |         
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-              | Dropdown 
-              span.caret
-            |           
-            ul.dropdown-menu
-              li
-                a(href='#') Action
-              |             
-              li
-                a(href='#') Another action
-              |             
-              li
-                a(href='#') Something else here
-              |             
-              li.divider(role='separator')
-              |             
-              li
-                a(href='#') Separated link
+              span.sr-only (current)          
+          li
+            a
+              +loginButtons
+
+
       // /.navbar-collapse
     // /.container-fluid
+
 
 template(name="footer")
   .footer
@@ -71,3 +45,24 @@ template(name="footer")
     a() Derry
     | 2015
     
+template(name="navbarBottom")
+  nav.navbar.navbar-default.navbar-fixed-bottom
+    .container-fluid
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | Links   
+          ul.dropdown-menu
+            li
+              a(href='{{pathFor "About"}}')
+                | About
+                span.sr-only (current)
+            li
+              a(href='#') Press
+            |             
+            li.divider(role='separator')
+            |             
+            li
+              a(href='#') Credits
+    // /.navbar-collapse
+  // /.container-fluid

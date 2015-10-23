@@ -1,8 +1,26 @@
 template(name="directoryGrid")
-  .directoryGrid
+  .directory-grid
     each user
       a(href="{{pathFor 'Profile' username=services.github.username}}")
-        .col-md-4
+        .col-md-6
           img.img-circle.avatar.small(src="#{services.github.scheda.avatar_url}")
           strong #{services.github.scheda.name}
           | #{services.github.scheda.location}
+
+template(name="directoryList")
+  .directory-list
+    .col-md-6.col-md-offset-3.col-sm-10.col-sm-offset-1.col-xs-12
+      table.table.table-hover
+        thead
+          tr
+            th Developer         
+            th.last Score
+        tbody
+          each user
+            tr
+              td 
+                a(href="{{pathFor 'Profile' username=services.github.username}}")
+                  img.img-circle.avatar.small(src="#{services.github.scheda.avatar_url}")
+                  strong #{services.github.scheda.name}
+                  | #{services.github.scheda.location}      
+              td.last #{services.github.scheda.followers}

@@ -1,12 +1,20 @@
+a
+  transition all 0.5s ease
+  color black
+  text-decoration none
+  &:hover
+    text-decoration none
+
 h1
   font-weight 300
 
 .navbar
   box-shadow none
   -webkit-box-shadow none
+  background-color transparent
 
 .navbar-brand
-  padding 15px
+  padding 15px 0px 0px 15px
   img
     height 35px
     width 35px
@@ -29,6 +37,10 @@ ul.nav-tabs
     margin-right 50px
 
 .footer
+/*
+  position fixed
+  bottom -50px
+*/
   text-align center
   margin 150px 0px 50px
 
@@ -50,3 +62,24 @@ ul.nav-tabs
 .home
   .jumbotron
     margin-top 50px
+
+.directory-list
+  .avatar
+    width 25px
+    height 25px
+    padding 0px
+  a
+    display block
+
+.last
+  text-align right
+
+/*
+.pager
+  li
+    a
+      border-color #666
+      &:hover
+        background-color transparent
+
+*/
