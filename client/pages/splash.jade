@@ -1,0 +1,6 @@
+template(name="splash")
+  .splash
+    if profileHasLoaded
+      +userSplash
+    else
+      +spinner
